@@ -6,7 +6,7 @@ import os
 
 app = Flask(__name__)
 AlwaysOnline(app)
-table = Table(os.environ["AIRTABLE_KEY"], os.environ["BASE_ID"], os.environ["TABLE_NAME"])
+table = Table(os.environ["AIRTABLE_KEY"], "appMB6P1AlDkbfsnf", "Tissue Sample")
 
 def getDataByID(id):
   data = table.get(id)["fields"]
